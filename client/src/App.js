@@ -4,6 +4,9 @@ import Guest from "./pages/Guest";
 import AddGuest from "./pages/AddGuest";
 import Staff from "./pages/Staff";
 import AddStaff from "./pages/AddStaff"
+import "./style.css"
+import UpdateGuest from "./pages/UpdateGuest";
+import UpdateStaff from "./pages/UpdateStaff";
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
         <Route path="/AddGuest" element={<AddGuest/>}/> 
         <Route path="/Staff" element={<Staff/>}/> 
         <Route path="/AddStaff" element={<AddStaff/>}/> 
+        <Route path="/update/:guest_id" element={<UpdateGuest/>}/> 
+        <Route path="/update/:staff_id" element={<UpdateStaff/>}/> 
 
       </Routes>
      </BrowserRouter>

@@ -1,0 +1,41 @@
+.App{
+    height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.delete{
+    border: 1px solid rgb(245,191,191);
+    padding: 3px 6px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(242,100,100);
+
+}
+.update{
+    border: 1px solid rgb(204,204,243);
+    padding: 3px 6px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(139,139,234);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input{
+    width: 100px;
+    padding: 1px;
+    border: 1px solid gray;
+}
+.formButton{
+    border: none;
+    padding: 10px;
+    background-color: rgb(242,100,100);
+    color: white;
+}

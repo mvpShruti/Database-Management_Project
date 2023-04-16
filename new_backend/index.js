@@ -44,9 +44,8 @@ app.get("/staff",(req,res)=>{
     })
 })
 app.post("/staff",(req,res)=>{
-    const q = "INSERT INTO staff (`ID`,`name`, `position`, `contact_info`) values (?)"
+    const q = "INSERT INTO staff (`name`, `position`, `contact_info`) values (?)"
     const values = [
-        req.body.ID,
         req.body.name,
         req.body.position,
         req.body.contact_info
@@ -57,6 +56,57 @@ app.post("/staff",(req,res)=>{
     })
 
 })
+
+app.delete("/guest/:guest_id",(req,res)=>{
+    const guestID = req.params.guest_id;
+    const q = "DELETE FROM guest WHERE guest_id = ?"
+    db.query(q,[guestID],(error,data)=>{
+        if(error) return res.json(error)
+        return res.json("Guest has been deleted!")
+    })
+})
+
+app.delete("/staff/:staff_id",(req,res)=>{
+    const staffID = req.params.staff_id;
+    const q = "DELETE FROM staff WHERE staff_id = ?"
+    db.query(q,[staffID],(error,data)=>{
+        if(error) return res.json(error)
+        return res.json("Staff has been deleted!")
+    })
+})
+
+app.put("/guest/:guest_id",(req,res)=>{
+    const guestID = req.params.guest_id;
+    const q = "UPDATE guest SET `name` = ?, `address` = ?, `contact_info`= ? WHERE guest_id = ? "
+    const values = [
+        req.body.name,
+        req.body.address,
+        req.body.contact_info
+    ]
+    
+    db.query(q,[...values, guestID],(error,data)=>{
+        if(error) return res.json(error)
+        return res.json("guest has been updated!")
+    })
+
+})
+
+app.put("/staff/:staff_id",(req,res)=>{
+    const staffID = req.params.staff_id;
+    const q = "UPDATE staff SET `name` = ?, `position` = ?, `contact_info`= ? WHERE staff_id = ? "
+    const values = [
+        req.body.name,
+        req.body.position,
+        req.body.contact_info
+    ]
+    
+    db.query(q,[...values, staffID],(error,data)=>{
+        if(error) return res.json(error)
+        return res.json("staff has been updated!")
+    })
+
+})
+
 app.listen(8800,()=>{
     console.log("hello2")
 })

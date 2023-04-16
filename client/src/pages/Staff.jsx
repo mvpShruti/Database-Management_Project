@@ -17,16 +17,27 @@ const Staff = () => {
         }
         fetch_staff()
     },[])
+
+    const handleDelete = async (staff_id) => {
+        try {
+            await axios.delete("http://localhost:8800/staff/" + staff_id)
+            window.location.reload()
+        } catch (error) {
+            console.log(error)
+            
+        }
+    }
   return (
     <div>
     <h1>staff</h1>
     <div className='staffs'>
         {staff.map(staff=>(
-            <div className='staff'>
-                <h2>{staff.ID}</h2>
+            <div className='staff' key = {staff.staff_id}>
                 <h2>{staff.name}</h2>
                 <h3>{staff.position}</h3>
                 <h3>{staff.contact_info}</h3>
+                <button className ="update"><Link to= {`/update/${staff.staff_id}`}>Update Staff</Link></button>
+                <button className ="delete" onClick ={()=>handleDelete(staff.staff_id)}> Delete Staff</button>
             </div>
         ))}
     </div>
