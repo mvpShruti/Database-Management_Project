@@ -29,19 +29,23 @@ const Staff = () => {
     }
   return (
     <div>
-    <h1>staff</h1>
+    <h1 className='mainStaff'> Staff List </h1>
+    <br></br>
     <div className='staffs'>
         {staff.map(staff=>(
             <div className='staff' key = {staff.staff_id}>
                 <h2>{staff.name}</h2>
                 <h3>{staff.position}</h3>
                 <h3>{staff.contact_info}</h3>
-                <button className ="update"><Link to= {`/update/${staff.staff_id}`}>Update Staff</Link></button>
+                <button className ="update"><Link to= {`/updatestaff/${staff.staff_id}`}>Update Staff</Link></button>
                 <button className ="delete" onClick ={()=>handleDelete(staff.staff_id)}> Delete Staff</button>
             </div>
         ))}
     </div>
-    <button> <Link to ="/AddStaff"> Add New Staff </Link></button>
+    <br></br>
+    <br></br>
+    <br></br>
+    <button className='addStaff'> <Link to ="/AddStaff"> Add New Staff </Link></button>
     </div>
   )
 }

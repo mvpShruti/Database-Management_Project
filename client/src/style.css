@@ -1,4 +1,4 @@
-.App{
+/* .App{
     height: 100vh;
     padding: 0px 100px;
     display: flex;
@@ -8,7 +8,7 @@
 }
 
 .delete{
-    border: 1px solid rgb(245,191,191);
+    border: 1px solid rgb(239,170,170);
     padding: 3px 6px;
     background-color: white;
     cursor: pointer;
@@ -37,5 +37,302 @@
     border: none;
     padding: 10px;
     background-color: rgb(242,100,100);
+    color: white;
+
+}
+
+/* nav ul {
+    list-style: none;
+    display: flex;
+    background-color: #EDC7B7;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  nav li {
+    padding: 20px;
+  } */
+  
+  /* nav ul li a {
+    color: #AC3B61;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+  } */
+
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Navbar Styles */
+  .nav ul {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    list-style-type: none;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 50px;
+    font-size: 1.2em;
+    transition: all 0.2s ease-in-out;
+    font-family: "Times New Roman", Times, serif;
+    
+  }
+  
+  .nav a:hover {
+    color: rgb(249, 151, 151);
+  }
+  
+  /* Page Styles */
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  .page h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .page p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .page input[type="text"], 
+  .page input[type="email"], 
+  .page input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .page button {
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .page button:hover {
+    background-color: #222;
+  }
+  
+  /* Specific Page Styles */
+  .home {
+    /* background-image: url('https://imgur.com/gallery/PlOQ6sI'); */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .guests {
+    text-align: center;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+
+  }
+  .staffs {
+    text-align: center;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .reservations {
+    /* background-image: url('https://i.imgur.com/yGhkrS4.jpg'); */
+    background-size: cover;
+    background-position: center;
+    color: #222;
+    text-align: center;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .addReserve {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid rgb(239, 170, 170);
+    padding: 3px 6px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(239, 170, 170);
+    border-radius: 12px;
+    text-align: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+  }
+  
+  .rooms {
+    /* background-image: url('https://i.imgur.com/ov5XWKM.jpg'); */
+    background-size: cover;
+    background-position: center;
+    color: #222;
+    text-align: center;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+
+  .delete{
+    border: 1px solid rgb(239,170,170);
+    padding: 3px 6px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(242,100,100);
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    font-family: "Times New Roman", Times, serif;
+
+}
+.delete:hover{
+    background-color: rgb(242,100,100); 
+    color: white;
+}
+.update{
+    border: 1px solid rgb(204,204,243);
+    padding: 3px 6px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(164, 164, 234);
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    font-family: "Times New Roman", Times, serif;
+}
+.update:hover{
+    background-color: rgb(204,204,243); 
+    color: white;
+}
+.addGuest{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid rgb(239, 170, 170);
+    padding: 3px 6px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(239, 170, 170);
+    border-radius: 12px;
+    text-align: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+
+}
+.addGuest:hover{
+    background-color: rgb(239,170,170); 
+    color: white;
+}
+.addStaff{
+    /* border: 1px solid rgb(239,170,170);
+    padding: 3px 6px;
+    background-color: white;
+    cursor: pointer;
+    color:  rgb(239,170,170);
+    border-radius: 12px;
+    text-align: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+    font-family: "Times New Roman", Times, serif; */
+    display: block;
+  margin: 0 auto;
+  border: 1px solid rgb(239, 170, 170);
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  color: rgb(239, 170, 170);
+  border-radius: 12px;
+  text-align: center;
+  justify-content: center;
+  transition-duration: 0.4s;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+.addStaff:hover{
+    background-color: rgb(239,170,170); 
+    color: white;
+}
+.form{
+    text-align: center;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+}
+.mainGuest{
+    text-align: center;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+
+}
+.mainStaff{
+    text-align: center;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+
+}
+.mainRoom{
+    text-align: center;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.mainReservations{
+    text-align: center;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+}
+.formButton{
+    border: 1px solid rgb(239,170,170);
+    padding: 3px 6px;
+    background-color: white;
+    cursor: pointer;
+    color:  rgb(239,170,170);
+    border-radius: 12px;
+    text-align: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+    font-family: "Times New Roman", Times, serif;
+}
+.formButton:hover{
+    background-color: rgb(239, 170, 170); 
     color: white;
 }

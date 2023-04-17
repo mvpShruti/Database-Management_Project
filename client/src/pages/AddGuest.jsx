@@ -30,10 +30,13 @@ const AddGuest = () => {
   return (
     <div className ='form' >
       <h1> Add New Guest</h1>
-      <input type = "text" placeholder = "Name" onChange={handleChange} name = "name"/>
-      <input type = "text" placeholder = "Address" onChange={handleChange} name = "address"/>
-      <input type = "text" placeholder = "Contact Info" onChange={handleChange} name = "contact_info" />
-      <button onClick = {handleClick}> Add Guest </button>
+     <h3> Name :</h3><input type = "text" placeholder = "Name" onChange={handleChange} name = "name"/>
+     <h3> Address :</h3><input type = "text" placeholder = "Address" onChange={handleChange} name = "address"/>
+     <h3> Contact Info :</h3><input type = "text" placeholder = "Contact Info" onChange={handleChange} name = "contact_info" />
+     <br></br>
+     <br></br>
+     <br></br>
+      <button className = 'addGuest' onClick = {handleClick}> Add Guest </button>
     </div>
   )
 }

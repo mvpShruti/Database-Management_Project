@@ -371,7 +371,7 @@ CREATE PROCEDURE `delete_staff`(
 )
 BEGIN
   UPDATE staff SET guest_id = NULL, reservation_id = NULL, billing_id = NULL WHERE guest_id = guest_id;
-  DELETE FROM staff WHERE staff_id = staffid;
+DELETE FROM staff WHERE staff_id = staffid;
 END //
 DELIMITER ;
 -- Procedure for inserting a room

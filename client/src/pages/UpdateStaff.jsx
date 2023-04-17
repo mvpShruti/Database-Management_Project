@@ -33,9 +33,13 @@ const UpdateStaff = () => {
   return (
     <div className ='form' >
       <h1> Update Staff Details</h1>
-      <input type = "text" placeholder = "Name" onChange={handleChange} name = "name"/>
-      <input type = "text" placeholder = "Position" onChange={handleChange} name = "position"/>
-      <input type = "text" placeholder = "Contact Info" onChange={handleChange} name = "contact_info" />
+      <br></br>
+      <h3> New Name :</h3><input type = "text" placeholder = "Name" onChange={handleChange} name = "name"/>
+      <h3> New Position :</h3><input type = "text" placeholder = "Position" onChange={handleChange} name = "position"/>
+      <h3> New Contact Info :</h3><input type = "text" placeholder = "Contact Info" onChange={handleChange} name = "contact_info" />
+      <br></br>
+      <br></br>
+      <br></br>
       <button className = "formButton" onClick = {handleClick}> Update Staff </button>
     </div>
   )

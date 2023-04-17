@@ -29,7 +29,8 @@ const Guest = () => {
     }
   return (
     <div>
-    <h1>guest</h1>
+    <h1 className='mainGuest'> Guest List </h1>
+    <br></br>
     <div className='guests'>
         {guest.map(guest=>(
             <div className='guest' key = {guest.guest_id}>
@@ -41,9 +42,54 @@ const Guest = () => {
             </div>
         ))}
     </div>
-    <button> <Link to ="/AddGuest"> Add New Guest </Link></button>
+    <br></br>
+    <br></br>
+    <br></br>
+    <button className='addGuest'> <Link to ="/AddGuest"> Add New Guest </Link></button>
     </div>
   )
+// return (
+//     <div>
+//       <h1 className="mainGuest">Guest List</h1>
+//       <br />
+//       <table className="guests">
+//         <thead>
+//           <tr>
+//             <th>Name</th>
+//             <th>Address</th>
+//             <th>Contact Info</th>
+//             <th></th>
+//             <th></th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {guest.map((guest) => (
+//             <tr key={guest.guest_id}>
+//               <td>{guest.name}</td>
+//               <td>{guest.address}</td>
+//               <td>{guest.contact_info}</td>
+//               <td>
+//                 <button className="update">
+//                   <Link to={`/update/${guest.guest_id}`}>Update Guest</Link>
+//                 </button>
+//               </td>
+//               <td>
+//                 <button className="delete" onClick={() => handleDelete(guest.guest_id)}>
+//                   Delete Guest
+//                 </button>
+//               </td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//       <br />
+//       <br />
+//       <br />
+//       <button className="addGuest">
+//         <Link to="/AddGuest">Add New Guest</Link>
+//       </button>
+//     </div>
+//   );
 }
 
 export default Guest
