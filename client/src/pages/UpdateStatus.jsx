@@ -19,15 +19,17 @@ const UpdateStatus= () => {
         // console.log(upRoom)
     }
 
-    const handleClick = async e =>{
-        e.preventDefault()
-             try {
-                await axios.put("http://localhost:8800/room/" + roomID, upRoom)
-                navigate("/Room")
-            } catch (error) {
-                console.log(error)
-            }
-    }
+    const handleClick = async e => {
+      e.preventDefault();
+      try {
+        await axios.put(`http://localhost:8800/room/${roomID}`, {
+          room_status: upRoom.room_status
+        });
+        navigate("/Room");
+      } catch (error) {
+        console.log(error);
+      }
+    };
     useEffect(() => {
       console.log(upRoom);
     },[upRoom]);

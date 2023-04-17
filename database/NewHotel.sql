@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS HAHANewHotel;
- CREATE DATABASE `HAHANewHotel` /*!40100 DEFAULT CHARACTER SET 
+DROP DATABASE IF EXISTS NewHotel;
+ CREATE DATABASE `NewHotel` /*!40100 DEFAULT CHARACTER SET 
 utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT 
 ENCRYPTION='N' */;
-use HAHANewHotel;
+use NewHotel;
 drop table if exists Room;
 drop table if exists Guest;
 drop table if exists Reservation;

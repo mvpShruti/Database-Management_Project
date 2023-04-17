@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "password",
-    database:"HAHANewHotel"
+    database:"NewHotel"
 
 })
 app.get("/",(req,res)=>{
@@ -124,20 +124,15 @@ app.delete("/reservations/:reservation_id",(req,res)=>{
     })
 })
 
-app.post("/reservations",(req,res)=>{
-    const q = "INSERT INTO reservation (`check_in_date`, `check_out_date`,`guest_id`,`room_id`) values (?, DEFAULT, DEFAULT)"
-    const values = [
-        // req.body.guest_id,
-        // req.body.room_id,
-        req.body.check_in_date,
-        req.body.check_out_date
-    ]
-    db.query(q,[values],(error,data)=>{
-        if(error) return res.json(error)
-        return res.json("reservation has been created!")
-    })
+// app.post("/reservations",(req,res)=>{
+//     const q = "INSERT INTO reservation (check_in_date, check_out_date) VALUES (?, ?)";
+//     const values = [check_in_date, check_out_date];
+//     db.query(q,[...values],(error,data)=>{
+//         if(error) return res.json(error)
+//         return res.json("reservation has been created!")
+//     })
 
-})
+// })
 
 app.get("/room",(req,res)=>{
     const q = "SELECT * FROM room"
@@ -160,12 +155,12 @@ app.delete("/room/:room_id",(req,res)=>{
 
 app.put("/room/:room_id",(req,res)=>{
     const roomID = req.params.room_id;
-    const q = "UPDATE room SET `room_status` = ?"
+    const q = "UPDATE room SET `room_status` = ? WHERE room_id = ?"
     const values = [
         req.body.room_status
     ]
     
-    db.query(q,[values, roomID],(error,data)=>{
+    db.query(q,[...values, roomID],(error,data)=>{
         if(error) return res.json(error)
         return res.json("status has been updated!")
     })

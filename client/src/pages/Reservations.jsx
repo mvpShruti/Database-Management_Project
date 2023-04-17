@@ -32,8 +32,8 @@ const Reservations = () => {
 <div>
   <h1 className='mainReservations'>Reservations List</h1>
   <br/>
-  <button className='addReserve'> <Link to ="/AddReservation"> Add New Reservation </Link></button>
-    <br/>
+  {/* <button className='addReserve'> <Link to ="/AddReservation"> Add New Reservation </Link></button> */}
+    {/* <br/> */}
     <br/>
   <table className='reservations'>
     <thead>
@@ -57,12 +57,6 @@ const Reservations = () => {
       ))}
     </tbody>
   </table>
-
-
-    <br></br>
-    <br></br>
-    <br></br>
-    <button className='addReserve'> <Link to ="/AddReservation"> Add New Reservation </Link></button>
     </div>
     
 
