@@ -52,6 +52,12 @@ return (
     <div>
       <h1 className="mainGuest">Guest List</h1>
       <br />
+
+      <button className="addGuest">
+        <Link to="/AddGuest">Add New Guest</Link>
+      </button>
+        <br></br>
+        <br></br>
       <table className="guests">
         <thead>
           <tr>
@@ -82,12 +88,6 @@ return (
           ))}
         </tbody>
       </table>
-      <br />
-      <br />
-      <br />
-      <button className="addGuest">
-        <Link to="/AddGuest">Add New Guest</Link>
-      </button>
     </div>
   );
 }

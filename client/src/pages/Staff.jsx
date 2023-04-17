@@ -31,6 +31,9 @@ const Staff = () => {
   <div>
     <h1 className='mainStaff'>Staff List</h1>
     <br />
+    <button className='addStaff'> <Link to ="/AddStaff"> Add New Staff </Link></button>
+    <br/>
+    <br/>
     <table className='table'>
       <thead>
         <tr>
@@ -61,11 +64,6 @@ const Staff = () => {
         ))}
       </tbody>
     </table>
-
-    <br></br>
-    <br></br>
-    <br></br>
-    <button className='addStaff'> <Link to ="/AddStaff"> Add New Staff </Link></button>
     </div>
   )
 }
