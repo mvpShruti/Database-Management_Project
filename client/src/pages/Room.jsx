@@ -29,20 +29,40 @@ const Room = () => {
     }
   return (
     <div>
-    <h1 className='mainRoom'> Room List </h1>
-    <br></br>
-    <div className='rooms'>
-        {room.map(room=>(
-            <div className='room' key = {room.room_id}>
-                <h2>Number: {room.room_number}</h2>
-                <h2>Type: {room.room_type}</h2>
-                <h3>Status: {room.room_status}</h3>
-                <button className ="update"> <Link to= {`/updatestatus/${room.room_id}`}>Update Status</Link> </button>
-                <button className ="delete" onClick ={()=>handleDelete(room.room_id)}> Delete Room</button> 
-            </div>
-        ))} 
-    </div>
-    </div>
+  <h1 className='mainRoom'> Room List </h1>
+  <br />
+  <table className='rooms'>
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {room.map(room => (
+        <tr className='room' key={room.room_id}>
+          <td>{room.room_number}</td>
+          <td>{room.room_type}</td>
+          <td>{room.room_status}</td>
+          <td>
+            <button className='update'>
+              <Link to={`/updatestatus/${room.room_id}`}>Update Status</Link>
+            </button>
+          </td>
+          <td>
+            <button className='delete' onClick={() => handleDelete(room.room_id)}>
+              Delete Room
+            </button>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
   )
 }
 

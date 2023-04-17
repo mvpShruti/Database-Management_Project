@@ -29,24 +29,39 @@ const Reservations = () => {
     }
     
   return (
-    <div>
-    <h1 className='mainReservations'>Reservations List</h1>
-    <br></br>
-    <div className='reservations'>
-        {reservation.map(reservation=>(
-            <div className='reservation' key = {reservation.reservation_id}>
-                <h3>Guest ID: {reservation.guest_id}</h3>
-                <h3>Check In Date: {reservation.check_in_date.split("T")[0]}</h3>
-                <h3>Check Out Date: {reservation.check_out_date.split("T")[0]}</h3>
-                <button className ="delete" onClick ={()=>handleDelete(reservation.reservation_id)}> Cancel Reservation</button> 
-            </div>
-        ))}
-    </div>
+<div>
+  <h1 className='mainReservations'>Reservations List</h1>
+  <table className='reservations'>
+    <thead>
+      <tr>
+        <th>Guest ID</th>
+        <th>Check In Date</th>
+        <th>Check Out Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {reservation.map(reservation=>(
+        <tr className='reservation' key = {reservation.reservation_id}>
+          <td>{reservation.guest_id}</td>
+          <td>{reservation.check_in_date.split("T")[0]}</td>
+          <td>{reservation.check_out_date.split("T")[0]}</td>
+          <td>
+            <button className ="delete" onClick ={()=>handleDelete(reservation.reservation_id)}> Cancel Reservation</button> 
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+
     <br></br>
     <br></br>
     <br></br>
     <button className='addReserve'> <Link to ="/AddReservation"> Add New Reservation </Link></button>
     </div>
+    
+
   )
 }
 

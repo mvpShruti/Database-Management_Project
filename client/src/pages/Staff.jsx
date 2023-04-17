@@ -28,20 +28,40 @@ const Staff = () => {
         }
     }
   return (
-    <div>
-    <h1 className='mainStaff'> Staff List </h1>
-    <br></br>
-    <div className='staffs'>
-        {staff.map(staff=>(
-            <div className='staff' key = {staff.staff_id}>
-                <h2>{staff.name}</h2>
-                <h3>{staff.position}</h3>
-                <h3>{staff.contact_info}</h3>
-                <button className ="update"><Link to= {`/updatestaff/${staff.staff_id}`}>Update Staff</Link></button>
-                <button className ="delete" onClick ={()=>handleDelete(staff.staff_id)}> Delete Staff</button>
-            </div>
+  <div>
+    <h1 className='mainStaff'>Staff List</h1>
+    <br />
+    <table className='table'>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Contact Info</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {staff.map(staff => (
+          <tr className='staff' key={staff.staff_id}>
+            <td>{staff.name}</td>
+            <td>{staff.position}</td>
+            <td>{staff.contact_info}</td>
+            <td>
+              <button className='update'>
+                <Link to={`/updatestaff/${staff.staff_id}`}>Update Staff</Link>
+              </button>
+            </td>
+            <td>
+              <button className='delete' onClick={() => handleDelete(staff.staff_id)}>
+                Delete Staff
+              </button>
+              </td>
+          </tr>
         ))}
-    </div>
+      </tbody>
+    </table>
+
     <br></br>
     <br></br>
     <br></br>
